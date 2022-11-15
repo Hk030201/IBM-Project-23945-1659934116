@@ -1,0 +1,6 @@
+flask
+ibm_db
+flask_mail
+flask_cors
+datetime
+
