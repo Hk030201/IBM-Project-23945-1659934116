@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pet-app
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pet-app
+  template:
+    metadata:
+      labels:
+        app: pet-app
+
+    spec:
+      containers:
+        - name: pet-app-container
+          image: pet
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+              protocol: TCP
